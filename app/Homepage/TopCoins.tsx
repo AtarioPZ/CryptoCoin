@@ -37,7 +37,7 @@ const TopCoins = () => {
     return (
         <section className="p-4">
             <h2 className="text-2xl font-bold">Top 5 Cryptocurrencies</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 md:grid-cols-3 gap-4 mt-4">
+            <div className="grid grid-cols-2 lg:grid-cols-4 md:grid-cols-3 gap-4 mt-4">
                 {predefinedTopCoins.map((coin) => (
                     <Link
                         key={coin.id}
