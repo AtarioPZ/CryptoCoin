@@ -1,0 +1,46 @@
+.coin-container {
+    display: flex; /* Flex layout to align sections */
+    justify-content: space-between; /* Separates sections */
+    padding: 20px; /* Optional padding for spacing */
+}
+
+.trending-coins-section {
+    flex: 1; /* Allows this section to take up more space */
+}
+
+.trending-coins-grid {
+    display: grid; /* Grid layout */
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); /* Adjusts based on screen size */
+    gap: 10px; /* Space between grid items */
+    align-items: center; /* Center align items vertically */
+}
+
+.trending-coin-item {
+    text-align: center; /* Center the text and image */
+    padding: 10px;
+}
+
+.coin-search-container {
+    flex: 1; /* Allows this section to take up appropriate space */
+    position: relative; /* For the dropdown to position correctly */
+}
+
+.dropdown {
+    position: absolute;
+    top: 100%; /* Position below the input box */
+    left: 0;
+    width: 100%;
+    background: white;
+    border: 1px solid #ccc;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.dropdown-item {
+    padding: 8px;
+    cursor: pointer;
+}
+
+.dropdown-item:hover {
+    background: lightgray; /* Highlight on hover */
+}
