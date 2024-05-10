@@ -1,4 +1,5 @@
 import { fetchCoinDetails, fetchTrendingCoins } from "@/utils/api";
+import HeroCoin from "@/components/HeroCoin/heroCoin";
 import CoinDetailsInfo from "@/components/CoinPage/CoinDetails/coinDetails";
 import Sentiment from "@/components/CoinPage/Sentiment";
 import About from "@/components/CoinPage/About";
@@ -23,6 +24,9 @@ export default async function Page({ params }: PageProps) {
 
             {coinDetails ? ( // If details are available, render the `About` component
                 <div>
+                    <div className="bg-white drop-shadow-lg rounded-lg p-8 h-fit w-full">
+                        <HeroCoin coinDetails={coinDetails} />
+                    </div>
                     <CoinDetailsInfo coinDetails={coinDetails} />
                     <Sentiment />
                     <About coinInfo={coinDescription} coinName={coinName} />
