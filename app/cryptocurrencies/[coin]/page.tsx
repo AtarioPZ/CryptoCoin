@@ -23,8 +23,8 @@ export default async function Page({ params }: PageProps) {
     return (
         <section className="md:w-4/5">
             {coinDetails ? (
-                <div>
-                    {/* <SubHeader coinName={coinName} /> */}
+                <div className="md:mx-20">
+                    <SubHeader />
                     <div className="bg-white drop-shadow-lg rounded-lg p-8 h-fit w-full">
                         <HeroCoin coinDetails={coinDetails} />
                     </div>

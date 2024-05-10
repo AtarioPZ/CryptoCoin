@@ -1,3 +1,4 @@
+import SubHeader from "./Coins/SubHeader/page";
 import TopCoins from "./TopCoins";
 import Trending from "./Trending";
 import Search from "@/components/Search";
@@ -6,6 +7,7 @@ const HomePage = () => {
     return (
         <section>
             <div className="md:mx-20">
+                <SubHeader />
                 <div className="flex flex-col lg:flex-row justify-between items-start">
                     <div className="order-2 lg:order-1 w-full lg:w-1/2">
                         <TopCoins />
