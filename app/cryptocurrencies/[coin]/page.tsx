@@ -1,10 +1,11 @@
 import { fetchCoinDetails, fetchTrendingCoins } from "@/utils/api";
+import CoinDetailsInfo from "@/components/CoinPage/CoinDetails/coinDetails";
 import Sentiment from "@/components/CoinPage/Sentiment";
 import About from "@/components/CoinPage/About";
 
 type PageProps = {
     params: {
-        coin: string; // Explicitly type the parameter
+        coin: string;
     };
     searchParams?: { [key: string]: string | string[] | undefined };
 };
@@ -22,6 +23,7 @@ export default async function Page({ params }: PageProps) {
 
             {coinDetails ? ( // If details are available, render the `About` component
                 <div>
+                    <CoinDetailsInfo coinDetails={coinDetails} />
                     <Sentiment />
                     <About coinInfo={coinDescription} coinName={coinName} />
                 </div>
