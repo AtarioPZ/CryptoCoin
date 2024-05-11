@@ -52,7 +52,7 @@ const Search = () => {
 
     return (
         <section>
-            <div className="sticky top-0 left-0 z-50 bg-slate-50">
+            <div className="sticky top-0 left-0 z-50 bg-slate-200 rounded-lg p-3">
                 <div className="font-semibold text-center lg:text-2xl p-4">Search for a Crypto</div>
                 <input
                     type="text"

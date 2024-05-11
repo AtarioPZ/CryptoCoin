@@ -40,7 +40,7 @@ const Trending = () => {
     }, []);
 
     return (
-        <section className="p-4">
+        <section className="p-6 bg-white rounded-lg">
             <h2 className="text-2xl font-bold">Trending Cryptocurrencies</h2>
             {isRefreshing && <p>Refreshing...</p>} {/* Display while refreshing */}
             <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 mt-4">
