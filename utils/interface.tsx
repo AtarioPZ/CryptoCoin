@@ -1,3 +1,18 @@
+import { StaticImageData } from "next/image";
+
+export type EventType = {
+  icon: StaticImageData
+  heading: string;
+  content: string;
+}
+
+export type PersonType = {
+  image: StaticImageData;
+  name: string;
+  position: string;
+  feedback: string;
+}
+
 export interface CoinList {
   id: string;
   symbol: string;

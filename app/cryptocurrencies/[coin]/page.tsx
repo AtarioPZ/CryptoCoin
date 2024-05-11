@@ -5,6 +5,8 @@ import CoinDetailsInfo from "@/components/CoinPage/CoinDetails/coinDetails";
 import Sentiment from "@/components/CoinPage/Sentiment";
 import About from "@/components/CoinPage/About";
 import Link from "next/link";
+import Tokenomics from "@/components/CoinPage/Tokenomics";
+import Team from "@/components/CoinPage/Team";
 
 type PageProps = {
     params: {
@@ -34,12 +36,17 @@ export default async function Page({ params }: PageProps) {
                         <Sentiment />
                         <div className="my-4"></div>
                         <About coinInfo={coinDescription} coinName={coinName} />
+                        <div className="my-4"></div>
+                        <Tokenomics />
+                        <div className="my-4"></div>
+                        <Team />
                     </div>
                 ) : (
                     <div className="p-10 text-2xl">
                         <h2>Details not available for {coinName}</h2> {/* Fallback */}
                         <p>Sorry, we could not retrieve details for this cryptocurrency.</p>
-                        <Link href='/' className="bg-blue-300 p-5">Go Back Home</Link>
+                        <div className="my-10"></div>
+                        <Link href='/'><button className="bg-blue-300 p-5">Go Back Home</button></Link>
                     </div>
                 )}
             </div>
