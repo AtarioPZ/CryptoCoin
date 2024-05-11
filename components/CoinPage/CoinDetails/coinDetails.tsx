@@ -2,7 +2,7 @@ import Fundamental from "./Fundamental";
 import Performance from "./Performance";
 import { CoinDetails } from "@/utils/interface";
 import Image from "next/image";
-import info from '@/public/next.svg'
+import info from '@/public/info.png'
 
 interface CoinDetailsInfoProps {
     coinDetails: CoinDetails;
