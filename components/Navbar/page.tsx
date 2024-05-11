@@ -14,7 +14,7 @@ const Navbar = () => {
     };
 
     return (
-        <section>
+        <section className="">
             <nav className="flex justify-between p-3 shadow-md items-center">
                 <div>
                     <Link href="/">

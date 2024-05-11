@@ -1,3 +1,6 @@
+import Image from "next/image";
+import Link from "next/link";
+
 type AboutProps = {
     coinName: string;
     coinInfo: string;
@@ -37,10 +40,60 @@ export default function About({ coinName, coinInfo }: AboutProps) {
 
             <span className="mt-4 h-0.5 bg-gray-300" />
 
-            <p className=" text-2xl font-semibold my-4">Already holding {coinName}</p>
-            <div className="flex lg:flex-row items-center flex-col flex-wrap gap-4">
-                Calculate your tax liability
+            <div className="mt-2 py-2">
+                <div className="text-[#0F1629] text-2xl font-semibold">
+                    Already Holding Bitcoin?
+                </div>
+                <div className="flex flex-col md:flex-row border-b-2 border-[#C9CFDD]/40 pb-4">
+                    <div className="mt-4 mb-4 md:mb-0 md:mr-4 flex-grow">
+                        <div className="w-full h-[151px] bg-gradient-to-br from-[#79F1A4] to-[#0E5CAD] rounded-lg flex">
+                            <div className="p-3">
+                                <Image
+                                    className="w-48 h-32 rounded-xl object-cover"
+                                    src="/phone.png"
+                                    alt="IMG"
+                                    width={48}
+                                    height={32}
+                                />
+                            </div>
+                            <div className="items-center p-4 flex flex-col justify-center">
+                                <div className=" text-white text-xl">
+                                    Calculate your Profits
+                                </div>
+                                <div className="bg-white px-3 py-2 rounded-lg mt-3 flex items-center">
+                                    <Link href='#'>
+                                        Check Now -{'>'}
+                                    </Link>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="mt-4 flex-grow">
+                        <div className="w-full h-[151px] bg-gradient-to-br from-[#FF9865] to-[#EF3031] rounded-lg flex">
+                            <div className="p-3">
+                                <Image
+                                    className="w-48 h-32 rounded-xl object-cover"
+                                    src="/wave.png"
+                                    alt="IMG"
+                                    width={48}
+                                    height={32}
+                                />
+                            </div>
+                            <div className="items-center p-4 flex flex-col justify-center">
+                                <div className=" text-white text-xl">
+                                    Calculate your tax liability
+                                </div>
+                                <div className="bg-white px-3 py-2 rounded-lg mt-3 flex items-center">
+                                    <Link href='#'>
+                                        Check Now -{'>'}
+                                    </Link>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
+
 
             <span className="my-4 h-0.5 bg-gray-300" />
             <p>
