@@ -15,7 +15,7 @@ interface CarouselProps {
 }
 
 const EmblaCarouselComponent = ({ sections }: CarouselProps) => {
-    const [emblaRef, emblaApi] = EmblaCarousel({ align: 'start', slidesToScroll: 2 });
+    const [emblaRef, emblaApi] = EmblaCarousel({ align: 'start', slidesToScroll: window.innerWidth > 768 ? 2 : 1 });
 
     const goToNextSlide = () => {
         if (emblaApi) {
@@ -28,6 +28,16 @@ const EmblaCarouselComponent = ({ sections }: CarouselProps) => {
             emblaApi.scrollPrev();
         }
     };
+
+    useEffect(() => {
+        const handleResize = () => {
+            const slidesToScroll = window.innerWidth > 768 ? 2 : 1;
+            emblaApi?.reInit({ slidesToScroll });
+        };
+
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, [emblaApi]);
 
     return (
         <section className="carousel-container">
@@ -59,3 +69,4 @@ const EmblaCarouselComponent = ({ sections }: CarouselProps) => {
 };
 
 export default EmblaCarouselComponent;
+
